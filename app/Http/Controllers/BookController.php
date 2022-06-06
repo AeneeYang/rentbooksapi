@@ -26,9 +26,7 @@ class BookController extends Controller
             return response($book, Response::HTTP_OK);
                 
         }catch(\Throwable $th){
-             // 錯誤資訊
-             $error_info = ($th -> errorInfo)[2];
-             
+             // 錯誤資訊     
              $info = '發生錯誤';
              
              $book = array('info' => $info, 'status' => 'error');
