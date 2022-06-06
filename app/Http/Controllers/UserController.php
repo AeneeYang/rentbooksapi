@@ -59,8 +59,7 @@ class UserController extends Controller
     {
         try {
             $request = User::create($request -> all());
-            //preg_match($pattern,$request->name) &&
-            $pattern = '/[^/x00-/x80]/'; 
+
             if(is_numeric($request->phone)==true){
                 if(strlen($request->phone) == 10 ){      
                     $user = $request -> refresh();
