@@ -106,6 +106,7 @@ class UserController extends Controller
             return response($user, Response::HTTP_OK);
 
         } catch (\Throwable $th) {
+            
             // 錯誤資訊
             $info = '發生錯誤';
             $user = array('info' => $info, 'status' => false);
@@ -162,7 +163,7 @@ class UserController extends Controller
                 $info = '會員已註冊過';
             else
                 $info = '發生錯誤';
-            
+
             $user = array('info' => $info, 'status' => false);
 
             return response($user, Response::HTTP_CREATED);
