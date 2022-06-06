@@ -78,7 +78,7 @@ class BookController extends Controller
              else
                  $info = '發生錯誤';
              
-             $book = array('info' => $info, 'status' => 'error');
+             $book = array('info' => $info, 'status' => false);
              
              return response($book, Response::HTTP_CREATED);
         }
@@ -104,7 +104,7 @@ class BookController extends Controller
             // 錯誤資訊
             $error_info = ($th -> errorInfo)[2];
             $info = '查無資料';    
-            $user = array('info' => $info, 'status' => 'error');
+            $user = array('info' => $info, 'status' => false);
             
             return response($user, Response::HTTP_CREATED);
         }
@@ -149,7 +149,7 @@ class BookController extends Controller
             else
                 $info = '發生錯誤';
             
-            $book = array('info' => $info, 'status' => 'error');
+            $book = array('info' => $info, 'status' => false);
             
             return response($book, Response::HTTP_CREATED);
        }
